@@ -45,7 +45,7 @@ import java.util.WeakHashMap;
 public class BluetoothControllerImpl implements BluetoothController, BluetoothCallback,
         CachedBluetoothDevice.Callback, LocalBluetoothProfileManager.ServiceListener {
     private static final String TAG = "BluetoothController";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     private final LocalBluetoothManager mLocalBluetoothManager;
     private final UserManager mUserManager;

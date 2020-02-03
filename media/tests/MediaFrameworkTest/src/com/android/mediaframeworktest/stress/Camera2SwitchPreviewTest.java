@@ -95,7 +95,7 @@ import junit.framework.AssertionFailedError;
 public class Camera2SwitchPreviewTest extends Camera2SurfaceViewTestCase {
     private static final String TAG = "SwitchPreviewTest";
     private static final boolean VERBOSE = Log.isLoggable(TAG, Log.VERBOSE);
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
     // 60 second to accommodate the possible long exposure time.
     private static final int MAX_REGIONS_AE_INDEX = 0;
     private static final int MAX_REGIONS_AWB_INDEX = 1;

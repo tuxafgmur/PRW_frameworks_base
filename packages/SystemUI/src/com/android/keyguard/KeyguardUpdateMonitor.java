@@ -120,8 +120,8 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener,
         ProvisioningChangedListener {
 
     private static final String TAG = "KeyguardUpdateMonitor";
-    private static final boolean DEBUG = KeyguardConstants.DEBUG;
-    private static final boolean DEBUG_SIM_STATES = KeyguardConstants.DEBUG_SIM_STATES;
+    private static final boolean DEBUG = false;
+    private static final boolean DEBUG_SIM_STATES = false;
     private static final int LOW_BATTERY_THRESHOLD = 20;
 
     private static final String ACTION_FACE_UNLOCK_STARTED
@@ -655,8 +655,6 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener,
     private Runnable mRetryFingerprintAuthentication = new Runnable() {
         @Override
         public void run() {
-            Log.w(TAG, "Retrying fingerprint after HW unavailable, attempt " +
-                    mHardwareUnavailableRetryCount);
             updateFingerprintListeningState();
         }
     };
@@ -1671,7 +1669,6 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener,
 
         boolean becameAbsent = false;
         if (!SubscriptionManager.isValidSubscriptionId(subId)) {
-            Log.w(TAG, "invalid subId in handleSimStateChange()");
             /* Only handle No SIM(ABSENT) due to handleServiceStateChange() handle other case */
             if (state == State.ABSENT) {
                 updateTelephonyCapable(true);
@@ -1723,7 +1720,6 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener,
         }
 
         if (!SubscriptionManager.isValidSubscriptionId(subId)) {
-            Log.w(TAG, "invalid subId in handleServiceStateChange()");
             return;
         } else {
             updateTelephonyCapable(true);

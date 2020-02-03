@@ -48,7 +48,7 @@ public class KeyguardPatternView extends LinearLayout implements KeyguardSecurit
         EmergencyButton.EmergencyButtonCallback {
 
     private static final String TAG = "SecurityPatternView";
-    private static final boolean DEBUG = KeyguardConstants.DEBUG;
+    private static final boolean DEBUG = false;
 
     // how long before we clear the wrong pattern
     private static final int PATTERN_CLEAR_TIMEOUT_MS = 2000;

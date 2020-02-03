@@ -124,7 +124,7 @@ public final class PowerManagerService extends SystemService
     private static final String TAG = "PowerManagerService";
 
     private static final boolean DEBUG = false;
-    private static final boolean DEBUG_SPEW = DEBUG && true;
+    private static final boolean DEBUG_SPEW = false;
 
     // Message: Sent when a user activity timeout occurs to update the power state.
     private static final int MSG_USER_ACTIVITY_TIMEOUT = 1;

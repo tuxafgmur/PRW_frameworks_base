@@ -87,7 +87,7 @@ import java.util.stream.Collectors;
  */
 abstract public class ManagedServices {
     protected final String TAG = getClass().getSimpleName();
-    protected final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    protected final boolean DEBUG = false;
 
     private static final int ON_BINDING_DIED_REBIND_DELAY_MS = 10000;
     protected static final String ENABLED_SERVICES_SEPARATOR = ":";

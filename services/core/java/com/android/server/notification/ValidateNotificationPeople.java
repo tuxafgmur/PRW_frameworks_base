@@ -57,7 +57,7 @@ public class ValidateNotificationPeople implements NotificationSignalExtractor {
     // Using a shorter log tag since setprop has a limit of 32chars on variable name.
     private static final String TAG = "ValidateNoPeople";
     private static final boolean VERBOSE = Log.isLoggable(TAG, Log.VERBOSE);;
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     private static final boolean ENABLE_PEOPLE_VALIDATOR = true;
     private static final String SETTING_ENABLE_PEOPLE_VALIDATOR =

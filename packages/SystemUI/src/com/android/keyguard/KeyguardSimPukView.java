@@ -47,7 +47,7 @@ import com.android.internal.telephony.IccCardConstants.State;
  */
 public class KeyguardSimPukView extends KeyguardPinBasedInputView {
     private static final String LOG_TAG = "KeyguardSimPukView";
-    private static final boolean DEBUG = KeyguardConstants.DEBUG;
+    private static final boolean DEBUG = false;
     public static final String TAG = "KeyguardSimPukView";
 
     private ProgressDialog mSimUnlockProgressDialog = null;

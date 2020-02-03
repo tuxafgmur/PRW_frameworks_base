@@ -72,7 +72,7 @@ import java.io.PrintWriter;
 
 public class StatusBarWindowView extends FrameLayout {
     public static final String TAG = "StatusBarWindowView";
-    public static final boolean DEBUG = StatusBar.DEBUG;
+    public static final boolean DEBUG = false;
 
     private DragDownHelper mDragDownHelper;
     private DoubleTapHelper mDoubleTapHelper;

@@ -106,7 +106,7 @@ import java.util.NoSuchElementException;
 public class MediaSessionService extends SystemService implements Monitor {
     private static final String TAG = "MediaSessionService";
     static final boolean USE_MEDIA2_APIS = false; // TODO: Change this to true when we're ready.
-    static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    static final boolean DEBUG = false;
     // Leave log for key event always.
     private static final boolean DEBUG_KEY_EVENT = false;
 

@@ -38,7 +38,7 @@ import java.util.Objects;
 
 public class CalendarTracker {
     private static final String TAG = "ConditionProviders.CT";
-    private static final boolean DEBUG = Log.isLoggable("ConditionProviders", Log.DEBUG);
+    private static final boolean DEBUG = false;
     private static final boolean DEBUG_ATTENDEES = false;
 
     private static final int EVENT_CHECK_LOOKAHEAD = 24 * 60 * 60 * 1000;

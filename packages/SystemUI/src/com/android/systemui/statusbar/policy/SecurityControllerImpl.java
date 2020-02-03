@@ -58,7 +58,7 @@ import java.util.ArrayList;
 public class SecurityControllerImpl extends CurrentUserTracker implements SecurityController {
 
     private static final String TAG = "SecurityController";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     private static final NetworkRequest REQUEST = new NetworkRequest.Builder()
             .removeCapability(NetworkCapabilities.NET_CAPABILITY_NOT_VPN)

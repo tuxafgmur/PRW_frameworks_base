@@ -77,7 +77,7 @@ import java.io.FileNotFoundException;
  */
 public class ArtManagerService extends android.content.pm.dex.IArtManager.Stub {
     private static final String TAG = "ArtManagerService";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     // Package name used to create the profile directory layout when
     // taking a snapshot of the boot image profile.

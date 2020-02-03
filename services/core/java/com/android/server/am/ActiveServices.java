@@ -104,8 +104,8 @@ public final class ActiveServices {
     private static final String TAG_SERVICE = TAG + POSTFIX_SERVICE;
     private static final String TAG_SERVICE_EXECUTING = TAG + POSTFIX_SERVICE_EXECUTING;
 
-    private static final boolean DEBUG_DELAYED_SERVICE = DEBUG_SERVICE;
-    private static final boolean DEBUG_DELAYED_STARTS = DEBUG_DELAYED_SERVICE;
+    private static final boolean DEBUG_DELAYED_SERVICE = false;
+    private static final boolean DEBUG_DELAYED_STARTS = false;
 
     private static final boolean LOG_SERVICE_START_STOP = false;
 

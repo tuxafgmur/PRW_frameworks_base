@@ -27,7 +27,7 @@ import com.android.internal.util.Preconditions;
 @WorkerThread
 final class TextClassificationSession implements TextClassifier {
 
-    /* package */ static final boolean DEBUG_LOG_ENABLED = true;
+    /* package */ static final boolean DEBUG_LOG_ENABLED = false;
     private static final String LOG_TAG = "TextClassificationSession";
 
     private final TextClassifier mDelegate;

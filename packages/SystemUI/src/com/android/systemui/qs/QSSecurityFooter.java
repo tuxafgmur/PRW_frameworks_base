@@ -51,7 +51,7 @@ import static android.provider.Settings.ACTION_VPN_SETTINGS;
 
 public class QSSecurityFooter implements OnClickListener, DialogInterface.OnClickListener {
     protected static final String TAG = "QSSecurityFooter";
-    protected static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    protected static final boolean DEBUG = false;
 
     private final View mRootView;
     private final TextView mFooterText;

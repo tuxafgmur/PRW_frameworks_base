@@ -262,7 +262,7 @@ class Cea608CCParser {
     public static final int MAX_COLS = 32;
 
     private static final String TAG = "Cea608CCParser";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     private static final int INVALID = -1;
 

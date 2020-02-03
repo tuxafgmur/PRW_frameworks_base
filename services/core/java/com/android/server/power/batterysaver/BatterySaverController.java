@@ -57,7 +57,7 @@ import java.util.ArrayList;
 public class BatterySaverController implements BatterySaverPolicyListener {
     static final String TAG = "BatterySaverController";
 
-    static final boolean DEBUG = BatterySaverPolicy.DEBUG;
+    static final boolean DEBUG = false;
 
     private final Object mLock;
     private final Context mContext;

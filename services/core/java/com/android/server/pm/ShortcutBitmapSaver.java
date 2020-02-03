@@ -52,7 +52,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class ShortcutBitmapSaver {
     private static final String TAG = ShortcutService.TAG;
-    private static final boolean DEBUG = ShortcutService.DEBUG;
+    private static final boolean DEBUG = false;
 
     private static final boolean ADD_DELAY_BEFORE_SAVE_FOR_TEST = false; // DO NOT submit with true.
     private static final long SAVE_DELAY_MS_FOR_TEST = 1000; // DO NOT submit with true.

@@ -67,8 +67,8 @@ import com.android.server.job.controllers.JobStatus;
  * calls to the client after they've specified jobFinished().
  */
 public final class JobServiceContext implements ServiceConnection {
-    private static final boolean DEBUG = JobSchedulerService.DEBUG;
-    private static final boolean DEBUG_STANDBY = JobSchedulerService.DEBUG_STANDBY;
+    private static final boolean DEBUG = false;
+    private static final boolean DEBUG_STANDBY = false;
 
     private static final String TAG = "JobServiceContext";
     /** Amount of time a job is allowed to execute for before being considered timed-out. */

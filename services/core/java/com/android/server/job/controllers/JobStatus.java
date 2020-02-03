@@ -61,7 +61,7 @@ import java.util.function.Predicate;
  */
 public final class JobStatus {
     static final String TAG = "JobSchedulerService";
-    static final boolean DEBUG = JobSchedulerService.DEBUG;
+    static final boolean DEBUG = false;
 
     public static final long NO_LATEST_RUNTIME = Long.MAX_VALUE;
     public static final long NO_EARLIEST_RUNTIME = 0L;
@@ -117,7 +117,7 @@ public final class JobStatus {
     private GrantedUriPermissions uriPerms;
     private boolean prepared;
 
-    static final boolean DEBUG_PREPARE = true;
+    static final boolean DEBUG_PREPARE = false;
     private Throwable unpreparedPoint = null;
 
     /**

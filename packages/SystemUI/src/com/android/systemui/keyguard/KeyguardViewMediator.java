@@ -139,8 +139,8 @@ public class KeyguardViewMediator extends SystemUI {
     private static final int KEYGUARD_DISPLAY_TIMEOUT_DELAY_DEFAULT = 30000;
     private static final long KEYGUARD_DONE_PENDING_TIMEOUT_MS = 3000;
 
-    private static final boolean DEBUG = KeyguardConstants.DEBUG;
-    private static final boolean DEBUG_SIM_STATES = KeyguardConstants.DEBUG_SIM_STATES;
+    private static final boolean DEBUG = false;
+    private static final boolean DEBUG_SIM_STATES = false;
 
     private final static String TAG = "KeyguardViewMediator";
 

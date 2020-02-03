@@ -24,7 +24,7 @@ import java.util.Date;
 class NtpTimeHelper {
 
     private static final String TAG = "NtpTimeHelper";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     // states for injecting ntp
     private static final int STATE_PENDING_NETWORK = 0;

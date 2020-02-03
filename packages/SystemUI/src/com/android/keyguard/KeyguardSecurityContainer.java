@@ -34,7 +34,7 @@ import com.android.internal.widget.LockPatternUtils;
 import com.android.keyguard.KeyguardSecurityModel.SecurityMode;
 
 public class KeyguardSecurityContainer extends FrameLayout implements KeyguardSecurityView {
-    private static final boolean DEBUG = KeyguardConstants.DEBUG;
+    private static final boolean DEBUG = false;
     private static final String TAG = "KeyguardSecurityView";
 
     private static final int USER_TYPE_PRIMARY = 1;

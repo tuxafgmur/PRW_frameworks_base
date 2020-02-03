@@ -59,7 +59,7 @@ import java.util.function.Predicate;
 public final class ConnectivityController extends StateController implements
         ConnectivityManager.OnNetworkActiveListener {
     private static final String TAG = "JobScheduler.Connectivity";
-    private static final boolean DEBUG = JobSchedulerService.DEBUG
+    private static final boolean DEBUG = false
             || Log.isLoggable(TAG, Log.DEBUG);
 
     private final ConnectivityManager mConnManager;

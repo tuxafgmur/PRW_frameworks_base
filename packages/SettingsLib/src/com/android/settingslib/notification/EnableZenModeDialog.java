@@ -55,7 +55,7 @@ import java.util.Objects;
 
 public class EnableZenModeDialog {
     private static final String TAG = "EnableZenModeDialog";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     private static final int[] MINUTE_BUCKETS = ZenModeConfig.MINUTE_BUCKETS;
     private static final int MIN_BUCKET_MINUTES = MINUTE_BUCKETS[0];

@@ -56,7 +56,7 @@ import java.util.concurrent.TimeUnit;
 class WatchlistLoggingHandler extends Handler {
 
     private static final String TAG = WatchlistLoggingHandler.class.getSimpleName();
-    private static final boolean DEBUG = NetworkWatchlistService.DEBUG;
+    private static final boolean DEBUG = false;
 
     @VisibleForTesting
     static final int LOG_WATCHLIST_EVENT_MSG = 1;

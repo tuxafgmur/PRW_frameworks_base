@@ -53,7 +53,7 @@ import java.io.PrintWriter;
 import java.util.function.BiConsumer;
 
 public abstract class PanelView extends FrameLayout {
-    public static final boolean DEBUG = PanelBar.DEBUG;
+    public static final boolean DEBUG = false;
     public static final String TAG = PanelView.class.getSimpleName();
     private static final int INITIAL_OPENING_PEEK_DURATION = 200;
     private static final int PEEK_ANIMATION_DURATION = 360;

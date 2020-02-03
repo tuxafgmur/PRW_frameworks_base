@@ -46,7 +46,7 @@ import com.android.internal.messages.nano.SystemMessageProto.SystemMessage;
 public class PipNotification {
     private static final String TAG = "PipNotification";
     private static final String NOTIFICATION_TAG = PipNotification.class.getName();
-    private static final boolean DEBUG = PipManager.DEBUG;
+    private static final boolean DEBUG = false;
 
     private static final String ACTION_MENU = "PipNotification.menu";
     private static final String ACTION_CLOSE = "PipNotification.close";

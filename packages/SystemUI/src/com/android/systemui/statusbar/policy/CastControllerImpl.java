@@ -44,7 +44,7 @@ import static android.media.MediaRouter.ROUTE_TYPE_REMOTE_DISPLAY;
 /** Platform implementation of the cast controller. **/
 public class CastControllerImpl implements CastController {
     private static final String TAG = "CastController";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     private final Context mContext;
     private final ArrayList<Callback> mCallbacks = new ArrayList<Callback>();

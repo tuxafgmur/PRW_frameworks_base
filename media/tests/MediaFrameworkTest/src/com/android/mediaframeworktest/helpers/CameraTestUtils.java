@@ -93,7 +93,7 @@ import java.util.concurrent.atomic.AtomicLong;
 public class CameraTestUtils extends Assert {
     private static final String TAG = "CameraTestUtils";
     private static final boolean VERBOSE = Log.isLoggable(TAG, Log.VERBOSE);
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
     public static final Size SIZE_BOUND_1080P = new Size(1920, 1088);
     public static final Size SIZE_BOUND_2160P = new Size(3840, 2160);
     // Only test the preview size that is no larger than 1080p.

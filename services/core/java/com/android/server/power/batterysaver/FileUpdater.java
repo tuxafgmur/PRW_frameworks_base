@@ -60,7 +60,7 @@ import java.util.Map;
 public class FileUpdater {
     private static final String TAG = BatterySaverController.TAG;
 
-    private static final boolean DEBUG = BatterySaverController.DEBUG;
+    private static final boolean DEBUG = false;
 
     /**
      * If this system property is set to 1, it'll skip all file writes. This can be used when

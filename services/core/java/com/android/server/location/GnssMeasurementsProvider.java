@@ -36,7 +36,7 @@ import com.android.internal.annotations.VisibleForTesting;
 public abstract class GnssMeasurementsProvider extends
         RemoteListenerHelper<IGnssMeasurementsListener> {
     private static final String TAG = "GnssMeasurementsProvider";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     private final Context mContext;
     private final GnssMeasurementProviderNative mNative;

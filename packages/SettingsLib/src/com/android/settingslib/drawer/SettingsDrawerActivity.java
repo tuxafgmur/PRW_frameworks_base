@@ -46,7 +46,7 @@ public class SettingsDrawerActivity extends Activity {
 
     protected static final boolean DEBUG_TIMING = false;
     private static final String TAG = "SettingsDrawerActivity";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     public static final String EXTRA_SHOW_MENU = "show_drawer_menu";
 

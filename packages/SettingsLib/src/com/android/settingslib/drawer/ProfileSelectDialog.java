@@ -34,7 +34,7 @@ public class ProfileSelectDialog extends DialogFragment implements OnClickListen
 
     private static final String TAG = "ProfileSelectDialog";
     private static final String ARG_SELECTED_TILE = "selectedTile";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     private Tile mSelectedTile;
 

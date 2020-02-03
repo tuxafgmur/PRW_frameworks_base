@@ -46,7 +46,7 @@ import java.util.function.Predicate;
  */
 public final class BackgroundJobsController extends StateController {
     private static final String TAG = "JobScheduler.Background";
-    private static final boolean DEBUG = JobSchedulerService.DEBUG
+    private static final boolean DEBUG = false
             || Log.isLoggable(TAG, Log.DEBUG);
 
     // Tri-state about possible "is this uid 'active'?" knowledge

@@ -61,7 +61,7 @@ class UsageStatsDatabase {
             QUERY_FLAG_FETCH_EVENTS;
 
     private static final String TAG = "UsageStatsDatabase";
-    private static final boolean DEBUG = UsageStatsService.DEBUG;
+    private static final boolean DEBUG = false;
     private static final String BAK_SUFFIX = ".bak";
     private static final String CHECKED_IN_SUFFIX = UsageStatsXml.CHECKED_IN_SUFFIX;
     private static final String RETENTION_LEN_KEY = "ro.usagestats.chooser.retention";

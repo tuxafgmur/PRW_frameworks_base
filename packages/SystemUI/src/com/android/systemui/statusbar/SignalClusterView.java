@@ -68,7 +68,7 @@ public class SignalClusterView extends LinearLayout implements NetworkController
         DarkReceiver, ProvisioningChangedListener {
 
     static final String TAG = "SignalClusterView";
-    static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    static final boolean DEBUG = false;
 
     private static final String SLOT_AIRPLANE = "airplane";
     private static final String SLOT_MOBILE = "mobile";

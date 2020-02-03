@@ -33,7 +33,7 @@ import android.view.WindowManager;
 // TODO(multi-display): Support multiple external displays
 public class KeyguardDisplayManager {
     protected static final String TAG = "KeyguardDisplayManager";
-    private static boolean DEBUG = KeyguardConstants.DEBUG;
+    private static boolean DEBUG = false;
 
     private final ViewMediatorCallback mCallback;
     private final MediaRouter mMediaRouter;

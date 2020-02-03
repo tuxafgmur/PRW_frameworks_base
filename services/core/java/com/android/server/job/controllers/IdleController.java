@@ -38,7 +38,7 @@ import java.util.function.Predicate;
 
 public final class IdleController extends StateController {
     private static final String TAG = "JobScheduler.Idle";
-    private static final boolean DEBUG = JobSchedulerService.DEBUG
+    private static final boolean DEBUG = false
             || Log.isLoggable(TAG, Log.DEBUG);
 
     // Policy: we decide that we're "idle" if the device has been unused /

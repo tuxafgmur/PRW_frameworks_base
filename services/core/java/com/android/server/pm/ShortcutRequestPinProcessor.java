@@ -41,7 +41,7 @@ import com.android.internal.util.Preconditions;
  */
 class ShortcutRequestPinProcessor {
     private static final String TAG = ShortcutService.TAG;
-    private static final boolean DEBUG = ShortcutService.DEBUG;
+    private static final boolean DEBUG = false;
 
     private final ShortcutService mService;
     private final Object mLock;

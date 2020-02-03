@@ -42,7 +42,7 @@ import java.util.ArrayList;
 public class DozeMachine {
 
     static final String TAG = "DozeMachine";
-    static final boolean DEBUG = DozeService.DEBUG;
+    static final boolean DEBUG = false;
 
     public enum State {
         /** Default state. Transition to INITIALIZED to get Doze going. */

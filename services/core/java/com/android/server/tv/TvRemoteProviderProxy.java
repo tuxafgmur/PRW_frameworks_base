@@ -38,7 +38,7 @@ import java.lang.ref.WeakReference;
  */
 final class TvRemoteProviderProxy implements ServiceConnection {
     private static final String TAG = "TvRemoteProvProxy";  // max. 23 chars
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.VERBOSE);
+    private static final boolean DEBUG = false;
     private static final boolean DEBUG_KEY = false;
 
 

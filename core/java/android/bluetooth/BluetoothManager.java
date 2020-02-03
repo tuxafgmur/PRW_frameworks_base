@@ -52,7 +52,7 @@ import java.util.List;
 @RequiresFeature(PackageManager.FEATURE_BLUETOOTH)
 public final class BluetoothManager {
     private static final String TAG = "BluetoothManager";
-    private static final boolean DBG = true;
+    private static final boolean DBG = false;
     private static final boolean VDBG = true;
 
     private final BluetoothAdapter mAdapter;

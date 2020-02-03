@@ -120,7 +120,7 @@ public class SoundPool extends PlayerBase {
     private static final int SAMPLE_LOADED = 1;
 
     private final static String TAG = "SoundPool";
-    private final static boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private final static boolean DEBUG = false;
 
     private long mNativeContext; // accessed by native methods
 

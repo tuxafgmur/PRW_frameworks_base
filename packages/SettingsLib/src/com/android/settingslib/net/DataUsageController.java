@@ -49,7 +49,7 @@ import java.util.Locale;
 public class DataUsageController {
 
     private static final String TAG = "DataUsageController";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
     private static final int FIELDS = FIELD_RX_BYTES | FIELD_TX_BYTES;
     private static final StringBuilder PERIOD_BUILDER = new StringBuilder(50);
     private static final java.util.Formatter PERIOD_FORMATTER = new java.util.Formatter(

@@ -65,7 +65,7 @@ import java.util.Locale;
 
 public class KeyguardStatusView extends GridLayout implements
         ConfigurationController.ConfigurationListener, View.OnLayoutChangeListener {
-    private static final boolean DEBUG = KeyguardConstants.DEBUG;
+    private static final boolean DEBUG = false;
     private static final String TAG = "KeyguardStatusView";
     private static final int MARQUEE_DELAY_MS = 2000;
 

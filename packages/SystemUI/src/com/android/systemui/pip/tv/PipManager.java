@@ -67,7 +67,7 @@ import static android.view.Display.DEFAULT_DISPLAY;
  */
 public class PipManager implements BasePipManager {
     private static final String TAG = "PipManager";
-    static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    static final boolean DEBUG = false;
 
     private static final String SETTINGS_PACKAGE_AND_CLASS_DELIMITER = "/";
 

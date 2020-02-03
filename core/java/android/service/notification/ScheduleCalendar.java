@@ -29,7 +29,7 @@ import java.util.TimeZone;
  */
 public class ScheduleCalendar {
     public static final String TAG = "ScheduleCalendar";
-    public static final boolean DEBUG = Log.isLoggable("ConditionProviders", Log.DEBUG);
+    public static final boolean DEBUG = false;
     private final ArraySet<Integer> mDays = new ArraySet<Integer>();
     private final Calendar mCalendar = Calendar.getInstance();
 

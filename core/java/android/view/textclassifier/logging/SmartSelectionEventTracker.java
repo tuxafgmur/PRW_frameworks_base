@@ -43,7 +43,7 @@ import java.util.UUID;
 public final class SmartSelectionEventTracker {
 
     private static final String LOG_TAG = "SmartSelectEventTracker";
-    private static final boolean DEBUG_LOG_ENABLED = true;
+    private static final boolean DEBUG_LOG_ENABLED = false;
 
     private static final int START_EVENT_DELTA = MetricsEvent.FIELD_SELECTION_SINCE_START;
     private static final int PREV_EVENT_DELTA = MetricsEvent.FIELD_SELECTION_SINCE_PREVIOUS;
@@ -122,7 +122,6 @@ public final class SmartSelectionEventTracker {
 
         if (event.mEventType != SelectionEvent.EventType.SELECTION_STARTED && mSessionId == null
                 && DEBUG_LOG_ENABLED) {
-            Log.d(LOG_TAG, "Selection session not yet started. Ignoring event");
             return;
         }
 
@@ -330,7 +329,6 @@ public final class SmartSelectionEventTracker {
         if (log.getType() == MetricsEvent.ACTION_TEXT_SELECTION_START) {
             String sessionId = Objects.toString(log.getTaggedData(SESSION_ID), "");
             sessionId = sessionId.substring(sessionId.lastIndexOf("-") + 1);
-            Log.d(LOG_TAG, String.format("New selection session: %s (%s)", widget, sessionId));
         }
 
         final String model = Objects.toString(log.getTaggedData(MODEL_NAME), UNKNOWN);
@@ -344,9 +342,6 @@ public final class SmartSelectionEventTracker {
                 Objects.toString(log.getTaggedData(EVENT_START), ZERO));
         final int eventEnd = Integer.parseInt(
                 Objects.toString(log.getTaggedData(EVENT_END), ZERO));
-
-        Log.d(LOG_TAG, String.format("%2d: %s/%s, range=%d,%d - smart_range=%d,%d (%s/%s)",
-                index, type, entity, eventStart, eventEnd, smartStart, smartEnd, widget, model));
     }
 
     /**

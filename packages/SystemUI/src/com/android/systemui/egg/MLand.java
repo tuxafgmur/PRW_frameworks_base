@@ -57,7 +57,7 @@ import java.util.ArrayList;
 public class MLand extends FrameLayout {
     public static final String TAG = "MLand";
 
-    public static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    public static final boolean DEBUG = false;
     public static final boolean DEBUG_DRAW = false; // DEBUG
 
     public static final boolean SHOW_TOUCHES = true;
@@ -74,7 +74,7 @@ public class MLand extends FrameLayout {
     public static final boolean HAVE_STARS = true;
 
     public static final float DEBUG_SPEED_MULTIPLIER = 0.5f; // only if DEBUG
-    public static final boolean DEBUG_IDDQD = Log.isLoggable(TAG + ".iddqd", Log.DEBUG);
+    public static final boolean DEBUG_IDDQD = false;
 
     public static final int DEFAULT_PLAYERS = 1;
     public static final int MIN_PLAYERS = 1;

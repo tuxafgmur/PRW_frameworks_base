@@ -113,8 +113,8 @@ public class GnssLocationProvider implements LocationProviderInterface, InjectNt
 
     private static final String TAG = "GnssLocationProvider";
 
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
-    private static final boolean VERBOSE = Log.isLoggable(TAG, Log.VERBOSE);
+    private static final boolean DEBUG = false;
+    private static final boolean VERBOSE = false;
 
     private static final ProviderProperties PROPERTIES = new ProviderProperties(
             true, true, false, false, true, true, true,
@@ -1093,7 +1093,6 @@ public class GnssLocationProvider implements LocationProviderInterface, InjectNt
     private void handleDownloadXtraData() {
         if (!mSupportsXtra) {
             // native code reports xtra not supported, don't try
-            Log.d(TAG, "handleDownloadXtraData() called when Xtra not supported");
             return;
         }
         if (mDownloadXtraDataPending == STATE_DOWNLOADING) {
@@ -1109,7 +1108,6 @@ public class GnssLocationProvider implements LocationProviderInterface, InjectNt
 
         // hold wake lock while task runs
         mDownloadXtraWakeLock.acquire(DOWNLOAD_XTRA_DATA_TIMEOUT_MS);
-        Log.i(TAG, "WakeLock acquired by handleDownloadXtraData()");
         AsyncTask.THREAD_POOL_EXECUTOR.execute(new Runnable() {
             @Override
             public void run() {
@@ -2294,10 +2292,6 @@ public class GnssLocationProvider implements LocationProviderInterface, InjectNt
         // note that this assumes the message will not be removed from the queue before
         // it is handled (otherwise the wake lock would be leaked).
         mWakeLock.acquire();
-        if (Log.isLoggable(TAG, Log.INFO)) {
-            Log.i(TAG, "WakeLock acquired by sendMessage(" + messageIdAsString(message) + ", " + arg
-                    + ", " + obj + ")");
-        }
         mHandler.obtainMessage(message, arg, 1, obj).sendToTarget();
     }
 
@@ -2361,10 +2355,6 @@ public class GnssLocationProvider implements LocationProviderInterface, InjectNt
             if (msg.arg2 == 1) {
                 // wakelock was taken for this message, release it
                 mWakeLock.release();
-                if (Log.isLoggable(TAG, Log.INFO)) {
-                    Log.i(TAG, "WakeLock released by handleMessage(" + messageIdAsString(message)
-                            + ", " + msg.arg1 + ", " + msg.obj + ")");
-                }
             }
         }
 

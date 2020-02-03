@@ -65,7 +65,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 @SystemService(Context.MEDIA_ROUTER_SERVICE)
 public class MediaRouter {
     private static final String TAG = "MediaRouter";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     static class Static implements DisplayManager.DisplayListener {
         final String mPackageName;

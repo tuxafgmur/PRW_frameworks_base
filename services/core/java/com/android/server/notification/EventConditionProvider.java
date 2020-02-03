@@ -52,7 +52,7 @@ import java.util.List;
  */
 public class EventConditionProvider extends SystemConditionProviderService {
     private static final String TAG = "ConditionProviders.ECP";
-    private static final boolean DEBUG = Log.isLoggable("ConditionProviders", Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     public static final ComponentName COMPONENT =
             new ComponentName("android", EventConditionProvider.class.getName());

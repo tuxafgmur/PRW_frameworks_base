@@ -35,7 +35,7 @@ import java.io.PrintWriter;
 public class DozeWallpaperState implements DozeMachine.Part {
 
     private static final String TAG = "DozeWallpaperState";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     private final IWallpaperManager mWallpaperManagerService;
     private boolean mIsAmbientMode;

@@ -55,7 +55,7 @@ import java.lang.annotation.RetentionPolicy;
  */
 public class BoundsAnimationController {
     private static final boolean DEBUG_LOCAL = false;
-    private static final boolean DEBUG = DEBUG_LOCAL || DEBUG_ANIM;
+    private static final boolean DEBUG = false;
     private static final String TAG = TAG_WITH_CLASS_NAME || DEBUG_LOCAL
             ? "BoundsAnimationController" : TAG_WM;
     private static final int DEBUG_ANIMATION_SLOW_DOWN_FACTOR = 1;

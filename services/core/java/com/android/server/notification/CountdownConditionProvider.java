@@ -38,7 +38,7 @@ import java.io.PrintWriter;
 /** Built-in zen condition provider for simple time-based conditions */
 public class CountdownConditionProvider extends SystemConditionProviderService {
     private static final String TAG = "ConditionProviders.CCP";
-    private static final boolean DEBUG = Log.isLoggable("ConditionProviders", Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     public static final ComponentName COMPONENT =
             new ComponentName("android", CountdownConditionProvider.class.getName());

@@ -107,7 +107,7 @@ public class PhoneStatusBarPolicy implements Callback, Callbacks,
         RotationLockControllerCallback, Listener, LocationChangeCallback,
         ZenModeController.Callback, DeviceProvisionedListener, KeyguardMonitor.Callback {
     private static final String TAG = "PhoneStatusBarPolicy";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     public static final int LOCATION_STATUS_ICON_ID = R.drawable.stat_sys_location;
     public static final int NUM_TASKS_FOR_INSTANT_APP_INFO = 5;

@@ -64,7 +64,7 @@ public class AppIdleHistory {
 
     private static final String TAG = "AppIdleHistory";
 
-    private static final boolean DEBUG = AppStandbyController.DEBUG;
+    private static final boolean DEBUG = false;
 
     // History for all users and all packages
     private SparseArray<ArrayMap<String,AppUsageHistory>> mIdleHistory = new SparseArray<>();

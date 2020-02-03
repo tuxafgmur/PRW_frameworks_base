@@ -40,7 +40,7 @@ import java.io.PrintWriter;
 public class FingerprintUnlockController extends KeyguardUpdateMonitorCallback {
 
     private static final String TAG = "FingerprintController";
-    private static final boolean DEBUG_FP_WAKELOCK = KeyguardConstants.DEBUG_FP_WAKELOCK;
+    private static final boolean DEBUG_FP_WAKELOCK = false;
     private static final long FINGERPRINT_WAKELOCK_TIMEOUT_MS = 15 * 1000;
     private static final String FINGERPRINT_WAKE_LOCK_NAME = "wake-and-unlock wakelock";
 

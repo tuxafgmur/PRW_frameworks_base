@@ -33,7 +33,7 @@ import java.util.Map;
 class PrivacyUtils {
 
     private static final String TAG = "PrivacyUtils";
-    private static final boolean DEBUG = NetworkWatchlistService.DEBUG;
+    private static final boolean DEBUG = false;
 
     /**
      * Parameters used for encoding watchlist reports.

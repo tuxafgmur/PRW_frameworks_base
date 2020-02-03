@@ -40,7 +40,7 @@ import java.util.Iterator;
  */
 public final class GeofenceHardwareImpl {
     private static final String TAG = "GeofenceHardwareImpl";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
     private static final int FIRST_VERSION_WITH_CAPABILITIES = 2;
 
     private final Context mContext;

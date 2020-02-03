@@ -26,7 +26,7 @@ import android.util.Slog;
 
 public class NotificationBackupHelper extends BlobBackupHelper {
     static final String TAG = "NotifBackupHelper";   // must be < 23 chars
-    static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    static final boolean DEBUG = false;
 
     // Current version of the blob schema
     static final int BLOB_VERSION = 1;

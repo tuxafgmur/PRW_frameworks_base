@@ -35,7 +35,7 @@ import java.util.concurrent.ThreadFactory;
 
 public class FuseAppLoop implements Handler.Callback {
     private static final String TAG = "FuseAppLoop";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
     public static final int ROOT_INODE = 1;
     private static final int MIN_INODE = 2;
     private static final ThreadFactory sDefaultThreadFactory = new ThreadFactory() {

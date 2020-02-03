@@ -43,7 +43,7 @@ import java.util.List;
 public final class BluetoothSap implements BluetoothProfile {
 
     private static final String TAG = "BluetoothSap";
-    private static final boolean DBG = true;
+    private static final boolean DBG = false;
     private static final boolean VDBG = false;
 
     /**

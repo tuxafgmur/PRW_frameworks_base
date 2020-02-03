@@ -46,7 +46,7 @@ import java.util.List;
 @VisibleForTesting
 public class NetworkScorerAppManager {
     private static final String TAG = "NetworkScorerAppManager";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
     private static final boolean VERBOSE = Log.isLoggable(TAG, Log.VERBOSE);
     private final Context mContext;
     private final SettingsFacade mSettingsFacade;

@@ -51,7 +51,7 @@ import java.util.Objects;
 /** Platform implementation of the zen mode controller. **/
 public class ZenModeControllerImpl extends CurrentUserTracker implements ZenModeController {
     private static final String TAG = "ZenModeController";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     private List<Callback> mCallbacks = new CopyOnWriteArrayList<Callback>();
     private final Context mContext;

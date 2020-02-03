@@ -40,7 +40,7 @@ import java.util.NoSuchElementException;
 public abstract class ClientMonitor implements IBinder.DeathRecipient {
     protected static final String TAG = FingerprintService.TAG; // TODO: get specific name
     protected static final int ERROR_ESRCH = 3; // Likely fingerprint HAL is dead. See errno.h.
-    protected static final boolean DEBUG = FingerprintService.DEBUG;
+    protected static final boolean DEBUG = false;
     private static final long[] DEFAULT_SUCCESS_VIBRATION_PATTERN = new long[] {0, 30};
     private static final AudioAttributes FINGERPRINT_SONFICATION_ATTRIBUTES =
             new AudioAttributes.Builder()

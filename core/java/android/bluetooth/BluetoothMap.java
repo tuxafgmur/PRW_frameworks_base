@@ -37,7 +37,7 @@ import java.util.List;
 public final class BluetoothMap implements BluetoothProfile {
 
     private static final String TAG = "BluetoothMap";
-    private static final boolean DBG = true;
+    private static final boolean DBG = false;
     private static final boolean VDBG = false;
 
     public static final String ACTION_CONNECTION_STATE_CHANGED =

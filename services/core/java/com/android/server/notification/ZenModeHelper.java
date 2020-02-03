@@ -87,7 +87,7 @@ import java.util.Objects;
  */
 public class ZenModeHelper {
     static final String TAG = "ZenModeHelper";
-    static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    static final boolean DEBUG = false;
 
     // The amount of time rules instances can exist without their owning app being installed.
     private static final int RULE_INSTANCE_GRACE_PERIOD = 1000 * 60 * 60 * 72;

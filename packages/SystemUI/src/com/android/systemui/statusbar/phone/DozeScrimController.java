@@ -29,7 +29,7 @@ import com.android.systemui.doze.DozeLog;
  */
 public class DozeScrimController {
     private static final String TAG = "DozeScrimController";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     private final DozeParameters mDozeParameters;
     private final Handler mHandler = new Handler();

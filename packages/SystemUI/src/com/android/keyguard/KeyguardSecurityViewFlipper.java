@@ -42,7 +42,7 @@ import java.lang.Override;
  */
 public class KeyguardSecurityViewFlipper extends ViewFlipper implements KeyguardSecurityView {
     private static final String TAG = "KeyguardSecurityViewFlipper";
-    private static final boolean DEBUG = KeyguardConstants.DEBUG;
+    private static final boolean DEBUG = false;
 
     private Rect mTempRect = new Rect();
 

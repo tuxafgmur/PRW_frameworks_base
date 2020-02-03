@@ -177,16 +177,16 @@ public class AudioService extends IAudioService.Stub
     private static final String TAG = "AudioService";
 
     /** Debug audio mode */
-    protected static final boolean DEBUG_MODE = Log.isLoggable(TAG + ".MOD", Log.DEBUG);
+    protected static final boolean DEBUG_MODE = false;
 
     /** Debug audio policy feature */
-    protected static final boolean DEBUG_AP = Log.isLoggable(TAG + ".AP", Log.DEBUG);
+    protected static final boolean DEBUG_AP = false;
 
     /** Debug volumes */
-    protected static final boolean DEBUG_VOL = Log.isLoggable(TAG + ".VOL", Log.DEBUG);
+    protected static final boolean DEBUG_VOL = false;
 
     /** debug calls to devices APIs */
-    protected static final boolean DEBUG_DEVICES = Log.isLoggable(TAG + ".DEVICES", Log.DEBUG);
+    protected static final boolean DEBUG_DEVICES = false;
     /** How long to delay before persisting a change in volume/ringer mode. */
     private static final int PERSIST_DELAY = 500;
 

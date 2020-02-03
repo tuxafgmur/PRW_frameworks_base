@@ -31,7 +31,7 @@ import android.util.Log;
  */
 public class ActivityRecognitionHardware extends IActivityRecognitionHardware.Stub {
     private static final String TAG = "ActivityRecognitionHW";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     private static final String HARDWARE_PERMISSION = Manifest.permission.LOCATION_HARDWARE;
     private static final String ENFORCE_HW_PERMISSION_MESSAGE = "Permission '"

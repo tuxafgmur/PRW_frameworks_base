@@ -66,7 +66,7 @@ import static com.android.mediaframeworktest.helpers.CameraTestUtils.verifyJpegK
 public class Camera2ReprocessCaptureTest extends Camera2SurfaceViewTestCase  {
     private static final String TAG = "ReprocessCaptureTest";
     private static final boolean VERBOSE = Log.isLoggable(TAG, Log.VERBOSE);
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
     private static final int CAPTURE_TIMEOUT_FRAMES = 100;
     private static final int CAPTURE_TIMEOUT_MS = 3000;
     private static final int WAIT_FOR_SURFACE_CHANGE_TIMEOUT_MS = 1000;

@@ -46,7 +46,7 @@ import java.util.List;
  */
 class UserUsageStatsService {
     private static final String TAG = "UsageStatsService";
-    private static final boolean DEBUG = UsageStatsService.DEBUG;
+    private static final boolean DEBUG = false;
     private static final SimpleDateFormat sDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     private static final int sDateFormatFlags =
             DateUtils.FORMAT_SHOW_DATE

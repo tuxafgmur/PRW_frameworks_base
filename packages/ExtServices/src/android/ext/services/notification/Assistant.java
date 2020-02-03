@@ -64,7 +64,7 @@ import java.util.Map;
  */
 public class Assistant extends NotificationAssistantService {
     private static final String TAG = "ExtAssistant";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     private static final String TAG_ASSISTANT = "assistant";
     private static final String TAG_IMPRESSION = "impression-set";

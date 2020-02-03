@@ -243,12 +243,11 @@ import java.util.function.Predicate;
 /** {@hide} */
 public class NotificationManagerService extends SystemService {
     static final String TAG = "NotificationService";
-    static final boolean DBG = Log.isLoggable(TAG, Log.DEBUG);
+    static final boolean DBG = false;
     public static final boolean ENABLE_CHILD_NOTIFICATIONS
             = SystemProperties.getBoolean("debug.child_notifs", true);
 
-    static final boolean DEBUG_INTERRUPTIVENESS = SystemProperties.getBoolean(
-            "debug.notification.interruptiveness", false);
+    static final boolean DEBUG_INTERRUPTIVENESS = false;
 
     static final int MAX_PACKAGE_NOTIFICATIONS = 50;
     static final float DEFAULT_MAX_NOTIFICATION_ENQUEUE_RATE = 5f;

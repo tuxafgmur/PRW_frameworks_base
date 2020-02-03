@@ -32,7 +32,7 @@ import java.util.List;
 public class DashboardCategory implements Parcelable {
 
     private static final String TAG = "DashboardCategory";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     /**
      * Title of the category that is shown to the user.

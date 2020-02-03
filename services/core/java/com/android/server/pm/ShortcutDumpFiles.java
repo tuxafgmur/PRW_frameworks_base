@@ -35,7 +35,7 @@ import java.util.function.Consumer;
 
 public class ShortcutDumpFiles {
     private static final String TAG = ShortcutService.TAG;
-    private static final boolean DEBUG = ShortcutService.DEBUG;
+    private static final boolean DEBUG = false;
     private final ShortcutService mService;
 
     public ShortcutDumpFiles(ShortcutService service) {

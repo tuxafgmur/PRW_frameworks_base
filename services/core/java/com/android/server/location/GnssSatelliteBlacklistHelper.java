@@ -20,7 +20,7 @@ import java.util.List;
 class GnssSatelliteBlacklistHelper {
 
     private static final String TAG = "GnssBlacklistHelper";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
     private static final String BLACKLIST_DELIMITER = ",";
 
     private final Context mContext;

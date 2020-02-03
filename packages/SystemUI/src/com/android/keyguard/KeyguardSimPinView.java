@@ -47,7 +47,7 @@ import android.widget.ImageView;
  */
 public class KeyguardSimPinView extends KeyguardPinBasedInputView {
     private static final String LOG_TAG = "KeyguardSimPinView";
-    private static final boolean DEBUG = KeyguardConstants.DEBUG_SIM_STATES;
+    private static final boolean DEBUG = false;
     public static final String TAG = "KeyguardSimPinView";
 
     private ProgressDialog mSimUnlockProgressDialog = null;
@@ -146,8 +146,6 @@ public class KeyguardSimPinView extends KeyguardPinBasedInputView {
         // Sending empty PIN here to query the number of remaining PIN attempts
         new CheckSimPin("", mSubId) {
             void onSimCheckResponse(final int result, final int attemptsRemaining) {
-                Log.d(LOG_TAG, "onSimCheckResponse " + " dummy One result" + result +
-                        " attemptsRemaining=" + attemptsRemaining);
                 if (attemptsRemaining >= 0) {
                     mRemainingAttempts = attemptsRemaining;
                     mSecurityMessageDisplay.setMessage(

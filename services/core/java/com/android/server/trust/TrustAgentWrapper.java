@@ -57,7 +57,7 @@ public class TrustAgentWrapper {
     private static final String EXTRA_COMPONENT_NAME = "componentName";
     private static final String TRUST_EXPIRED_ACTION = "android.server.trust.TRUST_EXPIRED_ACTION";
     private static final String PERMISSION = android.Manifest.permission.PROVIDE_TRUST_AGENT;
-    private static final boolean DEBUG = TrustManagerService.DEBUG;
+    private static final boolean DEBUG = false;
     private static final String TAG = "TrustAgentWrapper";
 
     private static final int MSG_GRANT_TRUST = 1;

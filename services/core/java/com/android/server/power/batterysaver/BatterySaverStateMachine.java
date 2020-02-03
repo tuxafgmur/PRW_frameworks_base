@@ -47,7 +47,7 @@ public class BatterySaverStateMachine {
     private static final String TAG = "BatterySaverStateMachine";
     private final Object mLock;
 
-    private static final boolean DEBUG = BatterySaverPolicy.DEBUG;
+    private static final boolean DEBUG = false;
 
     private final Context mContext;
     private final BatterySaverController mBatterySaverController;

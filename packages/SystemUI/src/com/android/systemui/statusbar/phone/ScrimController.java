@@ -64,7 +64,7 @@ public class ScrimController implements ViewTreeObserver.OnPreDrawListener, OnCo
         Dumpable {
 
     private static final String TAG = "ScrimController";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     /**
      * General scrim animation duration.

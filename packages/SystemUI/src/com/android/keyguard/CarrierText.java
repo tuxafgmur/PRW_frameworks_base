@@ -43,7 +43,7 @@ import com.android.settingslib.WirelessUtils;
 import android.telephony.TelephonyManager;
 
 public class CarrierText extends TextView {
-    private static final boolean DEBUG = KeyguardConstants.DEBUG;
+    private static final boolean DEBUG = false;
     private static final String TAG = "CarrierText";
 
     private static CharSequence mSeparator;

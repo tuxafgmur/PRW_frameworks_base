@@ -26,7 +26,7 @@ import com.android.server.power.batterysaver.BatterySaverController.Plugin;
 public class BatterySaverLocationPlugin implements Plugin {
     private static final String TAG = "BatterySaverLocationPlugin";
 
-    private static final boolean DEBUG = BatterySaverController.DEBUG;
+    private static final boolean DEBUG = false;
 
     private final Context mContext;
 

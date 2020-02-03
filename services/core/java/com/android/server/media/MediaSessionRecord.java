@@ -64,7 +64,7 @@ import java.util.ArrayList;
  */
 public class MediaSessionRecord implements IBinder.DeathRecipient {
     private static final String TAG = "MediaSessionRecord";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     /**
      * The amount of time we'll send an assumed volume after the last volume

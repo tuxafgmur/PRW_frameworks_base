@@ -35,7 +35,7 @@ import java.util.List;
  * <p>This class isn't thread-safe. The caller should take care of the synchronization.
  */
 class MediaSessionStack {
-    private static final boolean DEBUG = MediaSessionService.DEBUG;
+    private static final boolean DEBUG = false;
     private static final String TAG = "MediaSessionStack";
 
     /**

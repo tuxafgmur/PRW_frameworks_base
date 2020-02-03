@@ -32,7 +32,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class ReportWatchlistJobService extends JobService {
 
-    private static final boolean DEBUG = NetworkWatchlistService.DEBUG;
+    private static final boolean DEBUG = false;
     private static final String TAG = "WatchlistJobService";
 
     // Unique job id used in system service, other jobs should not use the same value.

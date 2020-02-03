@@ -42,7 +42,7 @@ import java.util.Collections;
 final class TvRemoteProviderWatcher {
 
     private static final String TAG = "TvRemoteProvWatcher";  // max. 23 chars
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.VERBOSE);
+    private static final boolean DEBUG = false;
 
     private final Context mContext;
     private final ProviderMethods mProvider;

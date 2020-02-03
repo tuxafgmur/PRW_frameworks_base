@@ -64,7 +64,7 @@ import static android.provider.Settings.System.POCKET_JUDGE;
 public class PocketService extends SystemService implements IBinder.DeathRecipient {
 
     private static final String TAG = PocketService.class.getSimpleName();
-    private static final boolean DEBUG = PocketConstants.DEBUG;
+    private static final boolean DEBUG = false;
 
     /**
      * The rate proximity sensor events are delivered at.

@@ -71,7 +71,7 @@ import java.util.Objects;
 
 public class ZenModePanel extends FrameLayout {
     private static final String TAG = "ZenModePanel";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     public static final int STATE_MODIFY = 0;
     public static final int STATE_AUTO_RULE = 1;

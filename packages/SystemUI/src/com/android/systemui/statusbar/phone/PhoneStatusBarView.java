@@ -51,7 +51,7 @@ import java.util.Objects;
 
 public class PhoneStatusBarView extends PanelBar {
     private static final String TAG = "PhoneStatusBarView";
-    private static final boolean DEBUG = StatusBar.DEBUG;
+    private static final boolean DEBUG = false;
     private static final boolean DEBUG_GESTURES = false;
     private static final int NO_VALUE = Integer.MIN_VALUE;
 

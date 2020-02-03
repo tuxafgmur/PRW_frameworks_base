@@ -42,7 +42,7 @@ import java.util.Objects;
 
 public class ZenModeFiltering {
     private static final String TAG = ZenModeHelper.TAG;
-    private static final boolean DEBUG = ZenModeHelper.DEBUG;
+    private static final boolean DEBUG = false;
 
     static final RepeatCallers REPEAT_CALLERS = new RepeatCallers();
 

@@ -41,7 +41,7 @@ import com.android.systemui.plugins.qs.QSTile;
  */
 public class QSDetailItems extends FrameLayout {
     private static final String TAG = "QSDetailItems";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     private final int mQsDetailIconOverlaySize;
     private final Context mContext;

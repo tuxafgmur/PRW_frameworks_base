@@ -32,7 +32,7 @@ import java.util.ArrayList;
 public class HotspotControllerImpl implements HotspotController, WifiManager.SoftApCallback {
 
     private static final String TAG = "HotspotController";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     private final ArrayList<Callback> mCallbacks = new ArrayList<>();
     private final ConnectivityManager mConnectivityManager;

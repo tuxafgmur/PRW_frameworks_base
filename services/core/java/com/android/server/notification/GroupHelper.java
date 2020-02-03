@@ -30,7 +30,7 @@ import java.util.Map;
  */
 public class GroupHelper {
     private static final String TAG = "GroupHelper";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     protected static final int AUTOGROUP_AT_COUNT = 4;
     protected static final String AUTOGROUP_KEY = "ranker_group";

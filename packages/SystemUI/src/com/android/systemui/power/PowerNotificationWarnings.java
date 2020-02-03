@@ -66,7 +66,7 @@ import java.util.Objects;
 
 public class PowerNotificationWarnings implements PowerUI.WarningsUI {
     private static final String TAG = PowerUI.TAG + ".Notification";
-    private static final boolean DEBUG = PowerUI.DEBUG;
+    private static final boolean DEBUG = false;
 
     private static final String TAG_BATTERY = "low_battery";
     private static final String TAG_TEMPERATURE = "high_temp";

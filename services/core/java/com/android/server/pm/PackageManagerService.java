@@ -423,7 +423,7 @@ public class PackageManagerService extends IPackageManager.Stub
     private static final boolean DEBUG_FILTERS = false;
     public static final boolean DEBUG_PERMISSIONS = false;
     private static final boolean DEBUG_SHARED_LIBRARIES = false;
-    public static final boolean DEBUG_COMPRESSION = Build.IS_DEBUGGABLE;
+    public static final boolean DEBUG_COMPRESSION = false;
 
     // Debug output for dexopting. This is shared between PackageManagerService, OtaDexoptService
     // and PackageDexOptimizer. All these classes have their own flag to allow switching a single
@@ -431,7 +431,7 @@ public class PackageManagerService extends IPackageManager.Stub
     public static final boolean DEBUG_DEXOPT = false;
 
     private static final boolean DEBUG_ABI_SELECTION = false;
-    private static final boolean DEBUG_INSTANT = Build.IS_DEBUGGABLE;
+    private static final boolean DEBUG_INSTANT = false;
     private static final boolean DEBUG_TRIAGED_MISSING = false;
     private static final boolean DEBUG_APP_DATA = false;
 

@@ -33,7 +33,7 @@ import java.util.Objects;
 
 public class ZenModeConditions implements ConditionProviders.Callback {
     private static final String TAG = ZenModeHelper.TAG;
-    private static final boolean DEBUG = ZenModeHelper.DEBUG;
+    private static final boolean DEBUG = false;
 
     private final ZenModeHelper mHelper;
     private final ConditionProviders mConditionProviders;

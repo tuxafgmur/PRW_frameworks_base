@@ -128,7 +128,7 @@ public class WallpaperManagerService extends IWallpaperManager.Stub
         implements IWallpaperManagerService {
     static final String TAG = "WallpaperManagerService";
     static final boolean DEBUG = false;
-    static final boolean DEBUG_LIVE = DEBUG || true;
+    static final boolean DEBUG_LIVE = false;
 
     // This 100MB limitation is defined in DisplayListCanvas.
     private static final int MAX_BITMAP_SIZE = 100 * 1024 * 1024;

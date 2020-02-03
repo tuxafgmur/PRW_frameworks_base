@@ -89,8 +89,7 @@ public class ScreenDecorations extends SystemUI implements Tunable {
 
     public static final String SIZE = "sysui_rounded_size";
     public static final String PADDING = "sysui_rounded_content_padding";
-    private static final boolean DEBUG_SCREENSHOT_ROUNDED_CORNERS =
-            SystemProperties.getBoolean("debug.screenshot_rounded_corners", false);
+    private static final boolean DEBUG_SCREENSHOT_ROUNDED_CORNERS = false;
 
     private DisplayManager mDisplayManager;
     private DisplayManager.DisplayListener mDisplayListener;

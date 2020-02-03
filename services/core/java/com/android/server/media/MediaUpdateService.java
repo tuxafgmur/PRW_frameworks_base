@@ -38,7 +38,7 @@ import com.android.server.SystemService;
 /** This class provides a system service that manages media framework updates. */
 public class MediaUpdateService extends SystemService {
     private static final String TAG = "MediaUpdateService";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
     private static final String MEDIA_UPDATE_PACKAGE_NAME =
             SystemProperties.get("ro.mediacomponents.package");
     private static final String EXTRACTOR_UPDATE_SERVICE_NAME = "media.extractor.update";

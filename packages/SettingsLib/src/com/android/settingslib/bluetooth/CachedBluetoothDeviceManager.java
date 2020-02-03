@@ -39,7 +39,7 @@ import java.util.Objects;
  */
 public class CachedBluetoothDeviceManager {
     private static final String TAG = "CachedBluetoothDeviceManager";
-    private static final boolean DEBUG = Utils.D;
+    private static final boolean DEBUG = false;
 
     private Context mContext;
     private final LocalBluetoothManager mBtManager;

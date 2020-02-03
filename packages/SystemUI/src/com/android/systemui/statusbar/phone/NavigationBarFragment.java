@@ -112,7 +112,7 @@ public class NavigationBarFragment extends Fragment implements Callbacks {
 
     public static final String TAG = "NavigationBar";
     private static final boolean DEBUG = false;
-    private static final boolean DEBUG_ROTATION = true;
+    private static final boolean DEBUG_ROTATION = false;
     private static final String EXTRA_DISABLE_STATE = "disabled_state";
     private static final String EXTRA_DISABLE2_STATE = "disabled2_state";
 

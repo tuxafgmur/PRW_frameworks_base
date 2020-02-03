@@ -30,7 +30,7 @@ import java.util.Deque;
  */
 public class TimingsTraceLog {
     // Debug boot time for every step if it's non-user build.
-    private static final boolean DEBUG_BOOT_TIME = !Build.IS_USER;
+    private static final boolean DEBUG_BOOT_TIME = false;
     private final Deque<Pair<String, Long>> mStartTimes =
             DEBUG_BOOT_TIME ? new ArrayDeque<>() : null;
     private final String mTag;
@@ -66,7 +66,6 @@ public class TimingsTraceLog {
             return;
         }
         if (mStartTimes.peek() == null) {
-            Slog.w(mTag, "traceEnd called more times than traceBegin");
             return;
         }
         Pair<String, Long> event = mStartTimes.pop();
@@ -86,6 +85,6 @@ public class TimingsTraceLog {
      * Log the duration so it can be parsed by external tools for performance reporting
      */
     public void logDuration(String name, long timeMs) {
-        Slog.d(mTag, name + " took to complete: " + timeMs + "ms");
+      //  Slog.d(mTag, name + " took to complete: " + timeMs + "ms");
     }
 }

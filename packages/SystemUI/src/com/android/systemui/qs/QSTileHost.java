@@ -54,7 +54,7 @@ import java.util.List;
 /** Platform implementation of the quick settings tile host **/
 public class QSTileHost implements QSHost, Tunable, PluginListener<QSFactory> {
     private static final String TAG = "QSTileHost";
-    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private static final boolean DEBUG = false;
 
     public static final String TILES_SETTING = Secure.QS_TILES;
 

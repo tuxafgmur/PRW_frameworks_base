@@ -119,7 +119,7 @@ public class KeyguardHostView extends FrameLayout implements SecurityCallback {
     // they will be handled here for specific media types such as music, otherwise
     // the audio service will bring up the volume dialog.
     private static final boolean KEYGUARD_MANAGES_VOLUME = false;
-    public static final boolean DEBUG = KeyguardConstants.DEBUG;
+    public static final boolean DEBUG = false;
     private static final String TAG = "KeyguardViewBase";
 
     private KeyguardSecurityContainer mSecurityContainer;

@@ -50,7 +50,7 @@ public class BatterySavingStats {
 
     private static final String TAG = "BatterySavingStats";
 
-    private static final boolean DEBUG = BatterySaverPolicy.DEBUG;
+    private static final boolean DEBUG = false;
 
     private final Object mLock;
 

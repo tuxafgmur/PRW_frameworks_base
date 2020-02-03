@@ -48,7 +48,7 @@ import java.util.function.IntConsumer;
 public class DozeTriggers implements DozeMachine.Part {
 
     private static final String TAG = "DozeTriggers";
-    private static final boolean DEBUG = DozeService.DEBUG;
+    private static final boolean DEBUG = false;
 
     /** adb shell am broadcast -a com.android.systemui.doze.pulse com.android.systemui */
     private static final String PULSE_ACTION = "com.android.systemui.doze.pulse";
