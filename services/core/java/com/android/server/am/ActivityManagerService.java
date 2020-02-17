@@ -4599,26 +4599,26 @@ public class ActivityManagerService extends IActivityManager.Stub
             Watchdog.getInstance().processStarted(app.processName, pid);
         }
 
-        StringBuilder buf = mStringBuilder;
-        buf.setLength(0);
-        buf.append("Start proc ");
-        buf.append(pid);
-        buf.append(':');
-        buf.append(app.processName);
-        buf.append('/');
-        UserHandle.formatUid(buf, app.startUid);
-        if (app.isolatedEntryPoint != null) {
-            buf.append(" [");
-            buf.append(app.isolatedEntryPoint);
-            buf.append("]");
-        }
-        buf.append(" for ");
-        buf.append(app.hostingType);
-        if (app.hostingNameStr != null) {
-            buf.append(" ");
-            buf.append(app.hostingNameStr);
-        }
-        reportUidInfoMessageLocked(TAG, buf.toString(), app.startUid);
+//         StringBuilder buf = mStringBuilder;
+//         buf.setLength(0);
+//         buf.append("Start proc ");
+//         buf.append(pid);
+//         buf.append(':');
+//         buf.append(app.processName);
+//         buf.append('/');
+//         UserHandle.formatUid(buf, app.startUid);
+//         if (app.isolatedEntryPoint != null) {
+//             buf.append(" [");
+//             buf.append(app.isolatedEntryPoint);
+//             buf.append("]");
+//         }
+//         buf.append(" for ");
+//         buf.append(app.hostingType);
+//         if (app.hostingNameStr != null) {
+//             buf.append(" ");
+//             buf.append(app.hostingNameStr);
+//         }
+//         reportUidInfoMessageLocked(TAG, buf.toString(), app.startUid);
         app.setPid(pid);
         app.usingWrapper = usingWrapper;
         app.pendingStart = false;
@@ -13119,10 +13119,10 @@ public class ActivityManagerService extends IActivityManager.Stub
                                             pi.applicationInfo, pi.name, pi.flags)
                                                     ? (app.userId == UserHandle.USER_SYSTEM) : true;
                                     if (processMatch && userMatch) {
-                                        Log.v(TAG, "Installing " + pi);
+                                        //Log.v(TAG, "Installing " + pi);
                                         app.thread.scheduleInstallProvider(pi);
                                     } else {
-                                        Log.v(TAG, "Skipping " + pi);
+                                        //Log.v(TAG, "Skipping " + pi);
                                     }
                                 }
                             }
@@ -21113,9 +21113,9 @@ public class ActivityManagerService extends IActivityManager.Stub
             BroadcastFilter bf = new BroadcastFilter(filter, rl, callerPackage,
                     permission, callingUid, userId, instantApp, visibleToInstantApps);
             if (rl.containsFilter(filter)) {
-                Slog.w(TAG, "Receiver with filter " + filter
-                        + " already registered for pid " + rl.pid
-                        + ", callerPackage is " + callerPackage);
+                //Slog.w(TAG, "Receiver with filter " + filter
+                //        + " already registered for pid " + rl.pid
+                //        + ", callerPackage is " + callerPackage);
             } else {
                 rl.add(bf);
                 if (!bf.debugCheck()) {

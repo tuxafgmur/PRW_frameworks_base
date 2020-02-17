@@ -694,13 +694,13 @@ final class ProcessRecord {
 
     void kill(String reason, boolean noisy) {
         if (!killedByAm) {
-            Trace.traceBegin(Trace.TRACE_TAG_ACTIVITY_MANAGER, "kill");
+            //Trace.traceBegin(Trace.TRACE_TAG_ACTIVITY_MANAGER, "kill");
             BoostFramework ux_perf = new BoostFramework();
-            if (mService != null && (noisy || info.uid == mService.mCurOomAdjUid)) {
-                mService.reportUidInfoMessageLocked(TAG,
-                        "Killing " + toShortString() + " (adj " + setAdj + "): " + reason,
-                        info.uid);
-            }
+//             if (mService != null && (noisy || info.uid == mService.mCurOomAdjUid)) {
+//                 mService.reportUidInfoMessageLocked(TAG,
+//                         "Killing " + toShortString() + " (adj " + setAdj + "): " + reason,
+//                         info.uid);
+//             }
             if (pid > 0) {
                 EventLog.writeEvent(EventLogTags.AM_KILL, userId, pid, processName, setAdj, reason);
                 Process.killProcessQuiet(pid);
@@ -715,7 +715,7 @@ final class ProcessRecord {
             if (ux_perf != null) {
                 ux_perf.perfUXEngine_events(BoostFramework.UXE_EVENT_KILL, 0, this.processName, 0);
             }
-            Trace.traceEnd(Trace.TRACE_TAG_ACTIVITY_MANAGER);
+            //Trace.traceEnd(Trace.TRACE_TAG_ACTIVITY_MANAGER);
         }
     }
 

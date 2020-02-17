@@ -611,8 +611,8 @@ class ActivityStarter {
                 ? UserHandle.getUserId(aInfo.applicationInfo.uid) : 0;
 
         if (err == ActivityManager.START_SUCCESS) {
-            Slog.i(TAG, "START u" + userId + " {" + intent.toShortString(true, true, true, false)
-                    + "} from uid " + callingUid);
+           // Slog.i(TAG, "START u" + userId + " {" + intent.toShortString(true, true, true, false)
+           //         + "} from uid " + callingUid);
         }
 
         ActivityRecord sourceRecord = null;

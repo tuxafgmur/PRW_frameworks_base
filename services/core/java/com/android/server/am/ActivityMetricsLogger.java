@@ -692,13 +692,13 @@ class ActivityMetricsLogger {
                 info.userId, info.activityRecordIdHashCode, info.launchedActivityShortComponentName,
                 info.windowsDrawnDelayMs);
 
-        StringBuilder sb = mStringBuilder;
-        sb.setLength(0);
-        sb.append("Displayed ");
-        sb.append(info.launchedActivityShortComponentName);
-        sb.append(": ");
-        TimeUtils.formatDuration(info.windowsDrawnDelayMs, sb);
-        Log.i(TAG, sb.toString());
+//         StringBuilder sb = mStringBuilder;
+//         sb.setLength(0);
+//         sb.append("Displayed ");
+//         sb.append(info.launchedActivityShortComponentName);
+//         sb.append(": ");
+//         TimeUtils.formatDuration(info.windowsDrawnDelayMs, sb);
+//         Log.i(TAG, sb.toString());
     }
 
     private int convertAppStartTransitionType(int tronType) {
