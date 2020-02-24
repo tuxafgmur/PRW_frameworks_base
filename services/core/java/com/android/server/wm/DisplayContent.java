@@ -215,6 +215,12 @@ class DisplayContent extends WindowContainer<DisplayContent.DisplayChildWindowCo
     int mInitialDisplayHeight = 0;
     int mInitialDisplayDensity = 0;
 
+    // Fields to backup screen size into computeSizeRangesAndScreenLayout procedure.
+    // So, we don't need to do calculations every time an application is started.
+    static int     mTbsmallestScreenWidthDp = 0;
+    static int     mTbscreenLayout = 0;
+    static boolean mTbFirst = true;
+
     DisplayCutout mInitialDisplayCutout;
     private final RotationCache<DisplayCutout, WmDisplayCutout> mDisplayCutoutCache
             = new RotationCache<>(this::calculateDisplayCutoutForRotationUncached);
@@ -1453,41 +1459,51 @@ class DisplayContent extends WindowContainer<DisplayContent.DisplayChildWindowCo
     private void computeSizeRangesAndScreenLayout(DisplayInfo displayInfo, int displayId,
             boolean rotated, int uiMode, int dw, int dh, float density, Configuration outConfig) {
 
-        // We need to determine the smallest width that will occur under normal
-        // operation.  To this, start with the base screen size and compute the
-        // width under the different possible rotations.  We need to un-rotate
-        // the current screen dimensions before doing this.
-        int unrotDw, unrotDh;
-        if (rotated) {
-            unrotDw = dh;
-            unrotDh = dw;
+        if (mTbFirst) {
+            // We need to determine the smallest width that will occur under normal
+            // operation.  To this, start with the base screen size and compute the
+            // width under the different possible rotations.  We need to un-rotate
+            // the current screen dimensions before doing this.
+            int unrotDw, unrotDh;
+            if (rotated) {
+                unrotDw = dh;
+                unrotDh = dw;
+            } else {
+                unrotDw = dw;
+                unrotDh = dh;
+            }
+            displayInfo.smallestNominalAppWidth = 1<<30;
+            displayInfo.smallestNominalAppHeight = 1<<30;
+            displayInfo.largestNominalAppWidth = 0;
+            displayInfo.largestNominalAppHeight = 0;
+            adjustDisplaySizeRanges(displayInfo, displayId, Surface.ROTATION_0, uiMode, unrotDw,
+                    unrotDh);
+            adjustDisplaySizeRanges(displayInfo, displayId, Surface.ROTATION_90, uiMode, unrotDh,
+                    unrotDw);
+            adjustDisplaySizeRanges(displayInfo, displayId, Surface.ROTATION_180, uiMode, unrotDw,
+                    unrotDh);
+            adjustDisplaySizeRanges(displayInfo, displayId, Surface.ROTATION_270, uiMode, unrotDh,
+                    unrotDw);
+            int sl = Configuration.resetScreenLayout(outConfig.screenLayout);
+            sl = reduceConfigLayout(sl, Surface.ROTATION_0, density, unrotDw, unrotDh, uiMode,
+                    displayId);
+            sl = reduceConfigLayout(sl, Surface.ROTATION_90, density, unrotDh, unrotDw, uiMode,
+                    displayId);
+            sl = reduceConfigLayout(sl, Surface.ROTATION_180, density, unrotDw, unrotDh, uiMode,
+                    displayId);
+            sl = reduceConfigLayout(sl, Surface.ROTATION_270, density, unrotDh, unrotDw, uiMode,
+                    displayId);
+            outConfig.smallestScreenWidthDp = (int)(displayInfo.smallestNominalAppWidth / density);
+            outConfig.screenLayout = sl;
+            // Stores values
+            mTbsmallestScreenWidthDp = outConfig.smallestScreenWidthDp;
+            mTbscreenLayout = outConfig.screenLayout;
+            mTbFirst = false;
         } else {
-            unrotDw = dw;
-            unrotDh = dh;
+            // Sets stored values
+            outConfig.smallestScreenWidthDp = mTbsmallestScreenWidthDp;
+            outConfig.screenLayout = mTbscreenLayout;
         }
-        displayInfo.smallestNominalAppWidth = 1<<30;
-        displayInfo.smallestNominalAppHeight = 1<<30;
-        displayInfo.largestNominalAppWidth = 0;
-        displayInfo.largestNominalAppHeight = 0;
-        adjustDisplaySizeRanges(displayInfo, displayId, Surface.ROTATION_0, uiMode, unrotDw,
-                unrotDh);
-        adjustDisplaySizeRanges(displayInfo, displayId, Surface.ROTATION_90, uiMode, unrotDh,
-                unrotDw);
-        adjustDisplaySizeRanges(displayInfo, displayId, Surface.ROTATION_180, uiMode, unrotDw,
-                unrotDh);
-        adjustDisplaySizeRanges(displayInfo, displayId, Surface.ROTATION_270, uiMode, unrotDh,
-                unrotDw);
-        int sl = Configuration.resetScreenLayout(outConfig.screenLayout);
-        sl = reduceConfigLayout(sl, Surface.ROTATION_0, density, unrotDw, unrotDh, uiMode,
-                displayId);
-        sl = reduceConfigLayout(sl, Surface.ROTATION_90, density, unrotDh, unrotDw, uiMode,
-                displayId);
-        sl = reduceConfigLayout(sl, Surface.ROTATION_180, density, unrotDw, unrotDh, uiMode,
-                displayId);
-        sl = reduceConfigLayout(sl, Surface.ROTATION_270, density, unrotDh, unrotDw, uiMode,
-                displayId);
-        outConfig.smallestScreenWidthDp = (int)(displayInfo.smallestNominalAppWidth / density);
-        outConfig.screenLayout = sl;
     }
 
     private int reduceConfigLayout(int curLayout, int rotation, float density, int dw, int dh,
