@@ -378,7 +378,7 @@ public final class StrictMode {
                 } else {
                     msg = "StrictMode policy violation:";
                 }
-                Log.d(TAG, msg + " " + info.getStackTrace());
+                //Log.d(TAG, msg + " " + info.getStackTrace());
             };
 
     private static volatile ViolationLogger sLogger = LOGCAT_LOGGER;

@@ -2437,7 +2437,7 @@ class StorageManagerService extends IStorageManager.Stub
         try {
             return mVold.fdeGetField(field);
         } catch (Exception e) {
-            Slog.wtf(TAG, e);
+            //Slog.wtf(TAG, e);
             return null;
         }
     }

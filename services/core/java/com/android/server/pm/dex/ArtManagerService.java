@@ -409,14 +409,14 @@ public class ArtManagerService extends android.content.pm.dex.IArtManager.Stub {
                 synchronized (mInstaller) {
                     boolean result = mInstaller.prepareAppProfile(pkg.packageName, user, appId,
                             profileName, codePath, dexMetadataPath);
-                    if (!result) {
-                        Slog.e(TAG, "Failed to prepare profile for " +
-                                pkg.packageName + ":" + codePath);
-                    }
+//                     if (!result) {
+//                         Slog.e(TAG, "Failed to prepare profile for " +
+//                                 pkg.packageName + ":" + codePath);
+//                     }
                 }
             }
         } catch (InstallerException e) {
-            Slog.e(TAG, "Failed to prepare profile for " + pkg.packageName, e);
+            //Slog.e(TAG, "Failed to prepare profile for " + pkg.packageName, e);
         }
     }
 
