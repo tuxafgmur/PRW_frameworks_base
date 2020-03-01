@@ -2011,10 +2011,10 @@ public final class ActiveServices {
                 final int opCode = AppOpsManager.permissionToOpCode(r.permission);
                 if (opCode != AppOpsManager.OP_NONE && mAm.mAppOpsService.noteOperation(
                         opCode, callingUid, callingPackage) != AppOpsManager.MODE_ALLOWED) {
-                    Slog.w(TAG, "Appop Denial: Accessing service " + r.name
-                            + " from pid=" + callingPid
-                            + ", uid=" + callingUid
-                            + " requires appop " + AppOpsManager.opToName(opCode));
+                    //Slog.w(TAG, "Appop Denial: Accessing service " + r.name
+                    //        + " from pid=" + callingPid
+                    //        + ", uid=" + callingUid
+                    //        + " requires appop " + AppOpsManager.opToName(opCode));
                     return null;
                 }
             }

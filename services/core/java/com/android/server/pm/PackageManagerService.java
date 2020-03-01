@@ -2812,12 +2812,12 @@ public class PackageManagerService extends IPackageManager.Stub
                          * application can be scanned.
                          */
                         if (mSettings.isDisabledSystemPackageLPr(ps.name)) {
-                            logCriticalInfo(Log.WARN,
-                                    "Expecting better updated system app for " + ps.name
-                                    + "; removing system app.  Last known"
-                                    + " codePath=" + ps.codePathString
-                                    + ", versionCode=" + ps.versionCode
-                                    + "; scanned versionCode=" + scannedPkg.getLongVersionCode());
+                            //logCriticalInfo(Log.WARN,
+                            //        "Expecting better updated system app for " + ps.name
+                            //        + "; removing system app.  Last known"
+                            //        + " codePath=" + ps.codePathString
+                            //        + ", versionCode=" + ps.versionCode
+                            //        + "; scanned versionCode=" + scannedPkg.getLongVersionCode());
                             removePackageLI(scannedPkg, true);
                             mExpectingBetter.put(ps.name, ps.codePath);
                         }
@@ -8547,7 +8547,7 @@ public class PackageManagerService extends IPackageManager.Stub
                         }
                     } catch (PackageManagerException e) {
                         errorCode = e.error;
-                        Slog.w(TAG, "Failed to scan " + parseResult.scanFile + ": " + e.getMessage());
+                        //Slog.w(TAG, "Failed to scan " + parseResult.scanFile + ": " + e.getMessage());
                     }
                 } else if (throwable instanceof PackageParser.PackageParserException) {
                     PackageParser.PackageParserException e = (PackageParser.PackageParserException)
@@ -11227,8 +11227,8 @@ public class PackageManagerService extends IPackageManager.Stub
             // user-installed version of the application will be ignored.
             if ((scanFlags & SCAN_REQUIRE_KNOWN) != 0) {
                 if (mExpectingBetter.containsKey(pkg.packageName)) {
-                    logCriticalInfo(Log.WARN,
-                            "Relax SCAN_REQUIRE_KNOWN requirement for package " + pkg.packageName);
+                    //logCriticalInfo(Log.WARN,
+                    //        "Relax SCAN_REQUIRE_KNOWN requirement for package " + pkg.packageName);
                 } else {
                     PackageSetting known = mSettings.getPackageLPr(pkg.packageName);
                     if (known != null) {
@@ -11328,7 +11328,7 @@ public class PackageManagerService extends IPackageManager.Stub
                                 ppkg = pp.parsePackage(previousPkg.codePath,
                                         parseFlags | PackageParser.PARSE_IS_SYSTEM_DIR);
                             } catch (PackageParserException e) {
-                                Slog.w(TAG, "failed to parse " + previousPkg.codePath, e);
+                                //Slog.w(TAG, "failed to parse " + previousPkg.codePath, e);
                             }
                         }
 
@@ -11468,9 +11468,9 @@ public class PackageManagerService extends IPackageManager.Stub
                         pkg.staticSharedLibVersion, SharedLibraryInfo.TYPE_STATIC,
                         pkg.manifestPackageName, pkg.getLongVersionCode())) {
                     hasStaticSharedLibs = true;
-                } else {
-                    Slog.w(TAG, "Package " + pkg.packageName + " library "
-                                + pkg.staticSharedLibName + " already exists; skipping");
+                //} else {
+                //    Slog.w(TAG, "Package " + pkg.packageName + " library "
+                //                + pkg.staticSharedLibName + " already exists; skipping");
                 }
                 // Static shared libs cannot be updated once installed since they
                 // use synthetic package name which includes the version code, so
@@ -11513,12 +11513,12 @@ public class PackageManagerService extends IPackageManager.Stub
                                     SharedLibraryInfo.VERSION_UNDEFINED,
                                     SharedLibraryInfo.TYPE_DYNAMIC,
                                     pkg.packageName, pkg.getLongVersionCode())) {
-                                Slog.w(TAG, "Package " + pkg.packageName + " library "
-                                        + name + " already exists; skipping");
+                              //  Slog.w(TAG, "Package " + pkg.packageName + " library "
+                              //          + name + " already exists; skipping");
                             }
-                        } else {
-                            Slog.w(TAG, "Package " + pkg.packageName + " declares lib "
-                                    + name + " that is not declared on system image; skipping");
+                        //} else {
+                        //    Slog.w(TAG, "Package " + pkg.packageName + " declares lib "
+                        //            + name + " that is not declared on system image; skipping");
                         }
                     }
 
@@ -22408,7 +22408,7 @@ Slog.v(TAG, ":: stepped forward, applying functor at tag " + parser.getName());
                     loaded.add(pkg.applicationInfo);
 
                 } catch (PackageManagerException e) {
-                    Slog.w(TAG, "Failed to scan " + ps.codePath + ": " + e.getMessage());
+                    //Slog.w(TAG, "Failed to scan " + ps.codePath + ": " + e.getMessage());
                 }
 
                 if (!Build.DATE.equals(ver.fingerprint)) {

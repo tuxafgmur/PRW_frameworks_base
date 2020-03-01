@@ -2840,10 +2840,10 @@ public class PackageParser {
         int index = pkg.requestedPermissions.indexOf(name);
         if (index == -1) {
             pkg.requestedPermissions.add(name.intern());
-        } else {
-            Slog.w(TAG, "Ignoring duplicate uses-permissions/uses-permissions-sdk-m: "
-                    + name + " in package: " + pkg.packageName + " at: "
-                    + parser.getPositionDescription());
+        //} else {
+        //    Slog.w(TAG, "Ignoring duplicate uses-permissions/uses-permissions-sdk-m: "
+        //            + name + " in package: " + pkg.packageName + " at: "
+        //            + parser.getPositionDescription());
         }
 
         return true;
@@ -4363,9 +4363,9 @@ public class PackageParser {
                     return null;
                 }
                 if (intent.countActions() == 0) {
-                    Slog.w(TAG, "No actions in intent filter at "
-                            + mArchiveSourcePath + " "
-                            + parser.getPositionDescription());
+                    //Slog.w(TAG, "No actions in intent filter at "
+                    //        + mArchiveSourcePath + " "
+                    //        + parser.getPositionDescription());
                 } else {
                     a.order = Math.max(intent.getOrder(), a.order);
                     a.intents.add(intent);
@@ -4742,9 +4742,9 @@ public class PackageParser {
                     return null;
                 }
                 if (intent.countActions() == 0) {
-                    Slog.w(TAG, "No actions in intent filter at "
-                            + mArchiveSourcePath + " "
-                            + parser.getPositionDescription());
+                    //Slog.w(TAG, "No actions in intent filter at "
+                    //        + mArchiveSourcePath + " "
+                    //        + parser.getPositionDescription());
                 } else {
                     a.order = Math.max(intent.getOrder(), a.order);
                     a.intents.add(intent);

@@ -543,9 +543,9 @@ public final class MessageQueue {
 
         synchronized (this) {
             if (mQuitting) {
-                IllegalStateException e = new IllegalStateException(
-                        msg.target + " sending message to a Handler on a dead thread");
-                Log.w(TAG, e.getMessage(), e);
+                //IllegalStateException e = new IllegalStateException(
+                //        msg.target + " sending message to a Handler on a dead thread");
+                //Log.w(TAG, e.getMessage(), e);
                 msg.recycle();
                 return false;
             }

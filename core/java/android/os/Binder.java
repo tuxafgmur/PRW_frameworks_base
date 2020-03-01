@@ -723,7 +723,7 @@ public class Binder implements IBinder {
         boolean res;
         // Log any exceptions as warnings, don't silently suppress them.
         // If the call was FLAG_ONEWAY then these exceptions disappear into the ether.
-        final boolean tracingEnabled = Binder.isTracingEnabled();
+        final boolean tracingEnabled = false; //Binder.isTracingEnabled();
         try {
             if (tracingEnabled) {
                 Trace.traceBegin(Trace.TRACE_TAG_ALWAYS, getClass().getName() + ":" + code);
@@ -735,9 +735,9 @@ public class Binder implements IBinder {
             }
             if ((flags & FLAG_ONEWAY) != 0) {
                 if (e instanceof RemoteException) {
-                    Log.w(TAG, "Binder call failed.", e);
+                    //Log.w(TAG, "Binder call failed.", e);
                 } else {
-                    Log.w(TAG, "Caught a RuntimeException from the binder stub implementation.", e);
+                    //Log.w(TAG, "Caught a RuntimeException from the binder stub implementation.", e);
                 }
             } else {
                 // Clear the parcel before writing the exception
@@ -1113,8 +1113,8 @@ final class BinderProxy implements IBinder {
             // For now, avoid spamming the log by disabling after we've logged
             // about this interface at least once
             mWarnOnBlocking = false;
-            Log.w(Binder.TAG, "Outgoing transactions from this process must be FLAG_ONEWAY",
-                    new Throwable());
+            //Log.w(Binder.TAG, "Outgoing transactions from this process must be FLAG_ONEWAY",
+            //        new Throwable());
         }
 
         final boolean tracingEnabled = Binder.isTracingEnabled();

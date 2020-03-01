@@ -1765,41 +1765,41 @@ public class ActivityStackSupervisor extends ConfigurationContainer implements D
                         resultRecord, resultWho, requestCode,
                         Activity.RESULT_CANCELED, null);
             }
-            final String msg;
+            //final String msg;
             if (actionRestriction == ACTIVITY_RESTRICTION_PERMISSION) {
-                msg = "Permission Denial: starting " + intent.toString()
-                        + " from " + callerApp + " (pid=" + callingPid
-                        + ", uid=" + callingUid + ")" + " with revoked permission "
-                        + ACTION_TO_RUNTIME_PERMISSION.get(intent.getAction());
+                //msg = "Permission Denial: starting " + intent.toString()
+                //        + " from " + callerApp + " (pid=" + callingPid
+                //        + ", uid=" + callingUid + ")" + " with revoked permission "
+                //        + ACTION_TO_RUNTIME_PERMISSION.get(intent.getAction());
             } else if (!aInfo.exported) {
-                msg = "Permission Denial: starting " + intent.toString()
-                        + " from " + callerApp + " (pid=" + callingPid
-                        + ", uid=" + callingUid + ")"
-                        + " not exported from uid " + aInfo.applicationInfo.uid;
+                //msg = "Permission Denial: starting " + intent.toString()
+                //        + " from " + callerApp + " (pid=" + callingPid
+                //        + ", uid=" + callingUid + ")"
+                //        + " not exported from uid " + aInfo.applicationInfo.uid;
             } else {
-                msg = "Permission Denial: starting " + intent.toString()
-                        + " from " + callerApp + " (pid=" + callingPid
-                        + ", uid=" + callingUid + ")"
-                        + " requires " + aInfo.permission;
+                //msg = "Permission Denial: starting " + intent.toString()
+                //        + " from " + callerApp + " (pid=" + callingPid
+                //        + ", uid=" + callingUid + ")"
+                //        + " requires " + aInfo.permission;
             }
-            Slog.w(TAG, msg);
-            throw new SecurityException(msg);
+            //Slog.w(TAG, msg);
+            //throw new SecurityException(msg);
         }
 
         if (actionRestriction == ACTIVITY_RESTRICTION_APPOP) {
-            final String message = "Appop Denial: starting " + intent.toString()
-                    + " from " + callerApp + " (pid=" + callingPid
-                    + ", uid=" + callingUid + ")"
-                    + " requires " + AppOpsManager.permissionToOp(
-                            ACTION_TO_RUNTIME_PERMISSION.get(intent.getAction()));
-            Slog.w(TAG, message);
+            //final String message = "Appop Denial: starting " + intent.toString()
+            //        + " from " + callerApp + " (pid=" + callingPid
+            //        + ", uid=" + callingUid + ")"
+            //        + " requires " + AppOpsManager.permissionToOp(
+            //                ACTION_TO_RUNTIME_PERMISSION.get(intent.getAction()));
+            //Slog.w(TAG, message);
             return false;
         } else if (componentRestriction == ACTIVITY_RESTRICTION_APPOP) {
-            final String message = "Appop Denial: starting " + intent.toString()
-                    + " from " + callerApp + " (pid=" + callingPid
-                    + ", uid=" + callingUid + ")"
-                    + " requires appop " + AppOpsManager.permissionToOp(aInfo.permission);
-            Slog.w(TAG, message);
+            //final String message = "Appop Denial: starting " + intent.toString()
+            //        + " from " + callerApp + " (pid=" + callingPid
+            //        + ", uid=" + callingUid + ")"
+            //        + " requires appop " + AppOpsManager.permissionToOp(aInfo.permission);
+            //Slog.w(TAG, message);
             return false;
         }
 

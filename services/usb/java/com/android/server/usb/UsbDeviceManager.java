@@ -267,10 +267,10 @@ public class UsbDeviceManager implements ActivityManagerInternal.ScreenObserver 
         try {
             IUsbGadget.getService(true);
         } catch (RemoteException e) {
-            Slog.e(TAG, "USB GADGET HAL present but exception thrown", e);
+            //Slog.e(TAG, "USB GADGET HAL present but exception thrown", e);
         } catch (NoSuchElementException e) {
             halNotPresent = true;
-            Slog.i(TAG, "USB GADGET HAL not present in the device", e);
+            //Slog.i(TAG, "USB GADGET HAL not present in the device", e);
         }
 
         mControlFds = new HashMap<>();

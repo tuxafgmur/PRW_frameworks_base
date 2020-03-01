@@ -375,13 +375,13 @@ class LockSettingsStorage {
             raf.readFully(stored, 0, stored.length);
             raf.close();
         } catch (IOException e) {
-            Slog.e(TAG, "Cannot read file " + e);
+            //Slog.e(TAG, "Cannot read file " + e);
         } finally {
             if (raf != null) {
                 try {
                     raf.close();
                 } catch (IOException e) {
-                    Slog.e(TAG, "Error closing file " + e);
+                    //Slog.e(TAG, "Error closing file " + e);
                 }
             }
         }

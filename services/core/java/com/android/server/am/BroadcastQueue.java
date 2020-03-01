@@ -524,25 +524,25 @@ public final class BroadcastQueue {
             int perm = mService.checkComponentPermission(filter.requiredPermission,
                     r.callingPid, r.callingUid, -1, true);
             if (perm != PackageManager.PERMISSION_GRANTED) {
-                Slog.w(TAG, "Permission Denial: broadcasting "
-                        + r.intent.toString()
-                        + " from " + r.callerPackage + " (pid="
-                        + r.callingPid + ", uid=" + r.callingUid + ")"
-                        + " requires " + filter.requiredPermission
-                        + " due to registered receiver " + filter);
+                //Slog.w(TAG, "Permission Denial: broadcasting "
+                //        + r.intent.toString()
+                //        + " from " + r.callerPackage + " (pid="
+                //        + r.callingPid + ", uid=" + r.callingUid + ")"
+                //        + " requires " + filter.requiredPermission
+                //        + " due to registered receiver " + filter);
                 skip = true;
             } else {
                 final int opCode = AppOpsManager.permissionToOpCode(filter.requiredPermission);
                 if (opCode != AppOpsManager.OP_NONE
                         && mService.mAppOpsService.noteOperation(opCode, r.callingUid,
                                 r.callerPackage) != AppOpsManager.MODE_ALLOWED) {
-                    Slog.w(TAG, "Appop Denial: broadcasting "
-                            + r.intent.toString()
-                            + " from " + r.callerPackage + " (pid="
-                            + r.callingPid + ", uid=" + r.callingUid + ")"
-                            + " requires appop " + AppOpsManager.permissionToOp(
-                                    filter.requiredPermission)
-                            + " due to registered receiver " + filter);
+                    //Slog.w(TAG, "Appop Denial: broadcasting "
+                    //        + r.intent.toString()
+                    //        + " from " + r.callerPackage + " (pid="
+                    //        + r.callingPid + ", uid=" + r.callingUid + ")"
+                    //        + " requires appop " + AppOpsManager.permissionToOp(
+                    //                filter.requiredPermission)
+                    //        + " due to registered receiver " + filter);
                     skip = true;
                 }
             }
@@ -553,14 +553,14 @@ public final class BroadcastQueue {
                 int perm = mService.checkComponentPermission(requiredPermission,
                         filter.receiverList.pid, filter.receiverList.uid, -1, true);
                 if (perm != PackageManager.PERMISSION_GRANTED) {
-                    Slog.w(TAG, "Permission Denial: receiving "
-                            + r.intent.toString()
-                            + " to " + filter.receiverList.app
-                            + " (pid=" + filter.receiverList.pid
-                            + ", uid=" + filter.receiverList.uid + ")"
-                            + " requires " + requiredPermission
-                            + " due to sender " + r.callerPackage
-                            + " (uid " + r.callingUid + ")");
+                    //Slog.w(TAG, "Permission Denial: receiving "
+                    //        + r.intent.toString()
+                    //        + " to " + filter.receiverList.app
+                    //        + " (pid=" + filter.receiverList.pid
+                    //        + ", uid=" + filter.receiverList.uid + ")"
+                    //        + " requires " + requiredPermission
+                    //        + " due to sender " + r.callerPackage
+                    //        + " (uid " + r.callingUid + ")");
                     skip = true;
                     break;
                 }
@@ -569,15 +569,15 @@ public final class BroadcastQueue {
                         && mService.mAppOpsService.noteOperation(appOp,
                         filter.receiverList.uid, filter.packageName)
                         != AppOpsManager.MODE_ALLOWED) {
-                    Slog.w(TAG, "Appop Denial: receiving "
-                            + r.intent.toString()
-                            + " to " + filter.receiverList.app
-                            + " (pid=" + filter.receiverList.pid
-                            + ", uid=" + filter.receiverList.uid + ")"
-                            + " requires appop " + AppOpsManager.permissionToOp(
-                            requiredPermission)
-                            + " due to sender " + r.callerPackage
-                            + " (uid " + r.callingUid + ")");
+                    //Slog.w(TAG, "Appop Denial: receiving "
+                    //        + r.intent.toString()
+                    //        + " to " + filter.receiverList.app
+                    //        + " (pid=" + filter.receiverList.pid
+                    //        + ", uid=" + filter.receiverList.uid + ")"
+                    //        + " requires appop " + AppOpsManager.permissionToOp(
+                    //        requiredPermission)
+                    //        + " due to sender " + r.callerPackage
+                    //        + " (uid " + r.callingUid + ")");
                     skip = true;
                     break;
                 }
@@ -587,13 +587,13 @@ public final class BroadcastQueue {
             int perm = mService.checkComponentPermission(null,
                     filter.receiverList.pid, filter.receiverList.uid, -1, true);
             if (perm != PackageManager.PERMISSION_GRANTED) {
-                Slog.w(TAG, "Permission Denial: security check failed when receiving "
-                        + r.intent.toString()
-                        + " to " + filter.receiverList.app
-                        + " (pid=" + filter.receiverList.pid
-                        + ", uid=" + filter.receiverList.uid + ")"
-                        + " due to sender " + r.callerPackage
-                        + " (uid " + r.callingUid + ")");
+                //Slog.w(TAG, "Permission Denial: security check failed when receiving "
+                //        + r.intent.toString()
+                //        + " to " + filter.receiverList.app
+                //        + " (pid=" + filter.receiverList.pid
+                //        + ", uid=" + filter.receiverList.uid + ")"
+                //        + " due to sender " + r.callerPackage
+                //        + " (uid " + r.callingUid + ")");
                 skip = true;
             }
         }
@@ -601,14 +601,14 @@ public final class BroadcastQueue {
                 && mService.mAppOpsService.noteOperation(r.appOp,
                 filter.receiverList.uid, filter.packageName)
                 != AppOpsManager.MODE_ALLOWED) {
-            Slog.w(TAG, "Appop Denial: receiving "
-                    + r.intent.toString()
-                    + " to " + filter.receiverList.app
-                    + " (pid=" + filter.receiverList.pid
-                    + ", uid=" + filter.receiverList.uid + ")"
-                    + " requires appop " + AppOpsManager.opToName(r.appOp)
-                    + " due to sender " + r.callerPackage
-                    + " (uid " + r.callingUid + ")");
+            //Slog.w(TAG, "Appop Denial: receiving "
+            //        + r.intent.toString()
+            //        + " to " + filter.receiverList.app
+            //        + " (pid=" + filter.receiverList.pid
+            //        + ", uid=" + filter.receiverList.uid + ")"
+            //        + " requires appop " + AppOpsManager.opToName(r.appOp)
+            //        + " due to sender " + r.callerPackage
+            //        + " (uid " + r.callingUid + ")");
             skip = true;
         }
 
@@ -631,27 +631,27 @@ public final class BroadcastQueue {
 
         if (!skip && !visibleToInstantApps && filter.instantApp
                 && filter.receiverList.uid != r.callingUid) {
-            Slog.w(TAG, "Instant App Denial: receiving "
-                    + r.intent.toString()
-                    + " to " + filter.receiverList.app
-                    + " (pid=" + filter.receiverList.pid
-                    + ", uid=" + filter.receiverList.uid + ")"
-                    + " due to sender " + r.callerPackage
-                    + " (uid " + r.callingUid + ")"
-                    + " not specifying FLAG_RECEIVER_VISIBLE_TO_INSTANT_APPS");
+            //Slog.w(TAG, "Instant App Denial: receiving "
+            //        + r.intent.toString()
+            //        + " to " + filter.receiverList.app
+            //        + " (pid=" + filter.receiverList.pid
+            //        + ", uid=" + filter.receiverList.uid + ")"
+            //        + " due to sender " + r.callerPackage
+            //        + " (uid " + r.callingUid + ")"
+            //        + " not specifying FLAG_RECEIVER_VISIBLE_TO_INSTANT_APPS");
             skip = true;
         }
 
         if (!skip && !filter.visibleToInstantApp && r.callerInstantApp
                 && filter.receiverList.uid != r.callingUid) {
-            Slog.w(TAG, "Instant App Denial: receiving "
-                    + r.intent.toString()
-                    + " to " + filter.receiverList.app
-                    + " (pid=" + filter.receiverList.pid
-                    + ", uid=" + filter.receiverList.uid + ")"
-                    + " requires receiver be visible to instant apps"
-                    + " due to sender " + r.callerPackage
-                    + " (uid " + r.callingUid + ")");
+            //Slog.w(TAG, "Instant App Denial: receiving "
+            //        + r.intent.toString()
+            //        + " to " + filter.receiverList.app
+            //        + " (pid=" + filter.receiverList.pid
+            //        + ", uid=" + filter.receiverList.uid + ")"
+            //        + " requires receiver be visible to instant apps"
+            //        + " due to sender " + r.callerPackage
+            //        + " (uid " + r.callingUid + ")");
             skip = true;
         }
 
