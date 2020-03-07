@@ -48,7 +48,6 @@ public class MediaActionSound {
     private SoundState[] mSounds;
 
     private static final String[] SOUND_DIRS = {
-        "/product/media/audio/ui/",
         "/system/media/audio/ui/",
     };
 
