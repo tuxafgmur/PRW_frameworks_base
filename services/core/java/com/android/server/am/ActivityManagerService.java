@@ -12642,11 +12642,11 @@ public class ActivityManagerService extends IActivityManager.Stub
 
                     cpr.wait(wait);
                     if (cpr.provider == null) {
-                        Slog.wtf(TAG, "Timeout waiting for provider "
-                                + cpi.applicationInfo.packageName + "/"
-                                + cpi.applicationInfo.uid + " for provider "
-                                + name
-                                + " providerRunning=" + providerRunning);
+                        //Slog.wtf(TAG, "Timeout waiting for provider "
+                        //        + cpi.applicationInfo.packageName + "/"
+                        //        + cpi.applicationInfo.uid + " for provider "
+                        //        + name
+                        //        + " providerRunning=" + providerRunning);
                         return null;
                     }
                 } catch (InterruptedException ex) {
@@ -21365,16 +21365,16 @@ public class ActivityManagerService extends IActivityManager.Stub
         // The vast majority of broadcasts sent from system internals
         // should be protected to avoid security holes, so yell loudly
         // to ensure we examine these cases.
-        if (callerApp != null) {
-            Log.wtf(TAG, "Sending non-protected broadcast " + action
-                            + " from system " + callerApp.toShortString() + " pkg " + callerPackage,
-                    new Throwable());
-        } else {
-            Log.wtf(TAG, "Sending non-protected broadcast " + action
-                            + " from system uid " + UserHandle.formatUid(callingUid)
-                            + " pkg " + callerPackage,
-                    new Throwable());
-        }
+//         if (callerApp != null) {
+//             Log.wtf(TAG, "Sending non-protected broadcast " + action
+//                             + " from system " + callerApp.toShortString() + " pkg " + callerPackage,
+//                     new Throwable());
+//         } else {
+//             Log.wtf(TAG, "Sending non-protected broadcast " + action
+//                             + " from system uid " + UserHandle.formatUid(callingUid)
+//                             + " pkg " + callerPackage,
+//                     new Throwable());
+//         }
     }
 
     @GuardedBy("this")

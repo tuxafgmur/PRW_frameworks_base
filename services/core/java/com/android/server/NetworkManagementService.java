@@ -657,7 +657,7 @@ public class NetworkManagementService extends INetworkManagementService.Stub
         synchronized (mQuotaLock) {
 
             if (hasKernelSupport) {
-                Slog.d(TAG, "enabling bandwidth control");
+                //Slog.d(TAG, "enabling bandwidth control");
                 try {
                     mConnector.execute("bandwidth", "enable");
                     mBandwidthControlEnabled = true;
@@ -674,7 +674,7 @@ public class NetworkManagementService extends INetworkManagementService.Stub
                 mConnector.execute("strict", "enable");
                 mStrictEnabled = true;
             } catch (NativeDaemonConnectorException e) {
-                Log.wtf(TAG, "Failed strict enable", e);
+                //Log.wtf(TAG, "Failed strict enable", e);
             }
 
             setDataSaverModeEnabled(mDataSaverMode);
